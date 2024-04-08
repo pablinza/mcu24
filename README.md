@@ -17,8 +17,14 @@ Deben contar con el IDE MPLABX v6.5.x y su compilador XC8 v2.4.x instalados en e
   <img src="basep887.png"></img>
 </p>
 El programa base que permite destellar el diodo LED conectado al pin RE2, se deescribe en las siguientes secciones:
-#include <xc.h>
+## Instructions and Navigations
+All of the code is organized into folders. For example, Chapter02.
+
+The code will look like the following:
+```c
+  #include <xc.h>
   #pragma config FOSC = INTRC_NOCLKO, WDTE = OFF, LVP = OFF
+  #include <xc.h>
   #define LEDpin PORTEbits.RE2 //Salida LEDpin
   volatile uint8_t tick1ms; 
   void taskLED(void); //Prototipo del procedimiento para destellar LED
@@ -68,7 +74,7 @@ El programa base que permite destellar el diodo LED conectado al pin RE2, se dee
     }
     if(tcnt == 200) LEDpin = 0;
   }
-
+```
 ## Lista de practicas desarrolladas en la Materia
 - LAB01 - Control de trafico dos fases con alerta
 - LAB02 - Control de temperatura lazo abierto 
