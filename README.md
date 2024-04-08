@@ -17,6 +17,7 @@ Deben contar con el IDE MPLABX v6.5.x y su compilador XC8 v2.4.x instalados en e
   <img src="basep887.png"></img>
 </p>
 El programa base que permite destellar el diodo LED conectado al pin RE2, se deescribe en main.c:
+
 ```c
   #pragma config FOSC = INTRC_NOCLKO, WDTE = OFF, LVP = OFF
   #include <xc.h>
