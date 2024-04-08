@@ -12,11 +12,10 @@ Los archivos con extension .png corresponden a una imagen de esquema de circuito
 
 Las practicas estan ordenadas de acuerdo a su nombre de archivo y solo se require cambiar el programa principal .c en el proyecto para la compilacion.
 
-Deben contar con el IDE MPLABX y su compilador XC8 instalados en el ordenador.
-Practicas de Programacion para Microcontroladores PIC16F.
+Deben contar con el IDE MPLABX v6.5.x y su compilador XC8 v2.4.x instalados en el ordenador.
+El circuito base para todos los laboratorios se muestra en el siguiente esquema.
 
 ## Lista de practicas desarrolladas en la Materia
-- LAB00 - Destello LED1 secuencial codigo base
 - LAB01 - Control de trafico dos fases con alerta
 - LAB02 - Control de temperatura lazo abierto 
 
