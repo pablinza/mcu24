@@ -14,7 +14,9 @@ Las practicas estan ordenadas de acuerdo a su nombre de archivo y solo se requir
 
 Deben contar con el IDE MPLABX v6.5.x y su compilador XC8 v2.4.x instalados en el ordenador.
 El circuito base para todos los laboratorios se muestra en el siguiente esquema.
-
+<p align="center">
+  <img src="basep887.png"></img>
+</p>
 ## Lista de practicas desarrolladas en la Materia
 - LAB01 - Control de trafico dos fases con alerta
 - LAB02 - Control de temperatura lazo abierto 
