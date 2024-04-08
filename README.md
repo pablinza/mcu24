@@ -19,7 +19,7 @@ Deben contar con el IDE MPLABX v6.5.x y su compilador XC8 v2.4.x instalados en e
 El programa base que permite destellar el diodo LED conectado al pin RE2, se deescribe en main.c:
 
 ```c
-#pragma config FOSC = INTRC_NOCLKO, WDTE = OFF, LVP = OFF
+#pragma config FOSC = INTRC_NOCLKOUT, WDTE = OFF, LVP = OFF
 #include <xc.h>
 #define LEDpin PORTEbits.RE2 //Salida LEDpin
 volatile uint8_t tick1ms; 
