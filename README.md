@@ -19,22 +19,22 @@ Deben contar con el IDE MPLABX v6.5.x y su compilador XC8 v2.4.x instalados en e
 El programa base que permite destellar el diodo LED conectado al pin RE2, se deescribe en main.c:
 
 ```c
-  #pragma config FOSC = INTRC_NOCLKO, WDTE = OFF, LVP = OFF
-  #include <xc.h>
-  #define LEDpin PORTEbits.RE2 //Salida LEDpin
-  volatile uint8_t tick1ms; 
-  void taskLED(void); //Prototipo del procedimiento para destellar LED
-  void __interrupt() isr() //Rutina ISR
-  {
+#pragma config FOSC = INTRC_NOCLKO, WDTE = OFF, LVP = OFF
+#include <xc.h>
+#define LEDpin PORTEbits.RE2 //Salida LEDpin
+volatile uint8_t tick1ms; 
+void taskLED(void); //Prototipo del procedimiento para destellar LED
+void __interrupt() isr() //Rutina ISR
+{
     if(INTCONbits.T0IF) //Activa cada 1ms
-     {
+    {
         INTCONbits.T0IF = 0;  //Limpia bandera
         TMR0 += 131; //Reinicia contador 
         tick1ms = 1; //Activa bandera 1ms
     }
-  }
-  void main(void) 
-  {
+}
+void main(void)
+{
     OSCCONbits.IRCF = 0b111; //Internal Fosc=8MHz Tcy=0.5u
     while(OSCCONbits.HTS == 0) {}; 
     ANSEL = 0; //Desactiva AN0-AN7
@@ -55,13 +55,12 @@ El programa base que permite destellar el diodo LED conectado al pin RE2, se dee
         if(tick1ms)
         {
             tick1ms = 0;
-            taskLED();
+            taskLED(); //Ejecución cada 1ms
         }
     }
-  }
-  
-  void taskLED(void) //Blink led task
-  {
+}  
+void taskLED(void) //Tarea para destellar el LED
+{
     static uint16_t tcnt = 0;
     if(tcnt++ > 999) 
     {
@@ -69,7 +68,7 @@ El programa base que permite destellar el diodo LED conectado al pin RE2, se dee
         LEDpin = 1;
     }
     if(tcnt == 200) LEDpin = 0;
-  }
+}
 ```
 ## Lista de practicas desarrolladas en la Materia
 - LAB01 - Control de trafico dos fases con alerta
