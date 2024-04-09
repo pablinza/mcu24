@@ -72,9 +72,10 @@ void taskLED(void) //Tarea para destellar el LED
 ```
 ## Lista de practicas desarrolladas en la Materia
 - **LAB01 - Control de trafico dos fases con entrada de mantenimiento**
->Funciomamiento: En modo normal las luces Rojo, Amarillo y Verde se activan en secuencia para cada fase.
->En modo mantenimiento las luces Amarillas destellan dos veces por segundo en ambas fases.
-- **LAB02 - Control de temperatura lazo abierto** 
+>EL funcionamiento en modo **normal** las luces Rojo, Amarillo y Verde se activan en secuencia para cada fase, y en **mantenimiento** las luces Amarillas destellan dos veces por segundo en ambas fases.
+- **LAB02 - Control de temperatura lazo abierto**
+> Un ventilador permite reducir la temperatura ambiente, que proviene de un sensor lineal MCP9700A. El MCU utiliza el modulo ADC para leer la temperatura del sensor y tomar accion con el ventilador.
+- **LAB03 - Ejemplo en Desarrollo**
 
 Adjunto el siguiente link que muestra como compilar estos ejemplos en MPLABX
 [![](http://img.youtube.com/vi/w-GRu89glrg/0.jpg)](http://www.youtube.com/watch?v=w-GRu89glrg "Compilar en MPLABX")
