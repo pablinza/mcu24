@@ -71,7 +71,10 @@ void taskLED(void) //Tarea para destellar el LED
 }
 ```
 ## Lista de practicas desarrolladas en la Materia
-- LAB01 - Control de trafico dos fases con alerta
+- LAB01 - Control de trafico dos fases con entrada de mantenimiento
+  Inputs: Switch selector de mantenimiento Outputs: Luces Rojo Amarillo Verde fase1 y fase2
+  Funciomamiento: En modo normal las luces se activan en secuencia para cada fase.
+  En modo mantenimiento las luces destellan dos veces por segundo.
 - LAB02 - Control de temperatura lazo abierto 
 
 Adjunto el siguiente link que muestra como compilar estos ejemplos en MPLABX
